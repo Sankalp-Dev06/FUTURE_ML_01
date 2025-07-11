@@ -1,0 +1,23 @@
+# AI-Powered Sales Forecasting Dashboard (Superstore Dataset)
+# Run: pip install -r requirements.txt
+
+
+# Core data processing
+pandas
+numpy
+
+# Visualization
+matplotlib
+seaborn
+
+# Time series forecasting
+prophet
+
+# Modeling & ML (optional in case you explore other models)
+scikit-learn
+
+# Power BI Integration (if exporting to Excel/CSV for dashboard)
+xlsxwriter
+
+# Jupyter Notebook
+notebook
