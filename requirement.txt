@@ -9,6 +9,7 @@ numpy
 # Visualization
 matplotlib
 seaborn
+plotly
 
 # Time series forecasting
 prophet
