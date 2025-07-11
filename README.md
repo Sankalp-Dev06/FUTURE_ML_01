@@ -1,8 +1,8 @@
-# Sales Forecasting Dashboard
+# 📈 FUTURE_ML_01 – AI-Powered Sales Forecasting Dashboard
 
-A data analysis and forecasting project that processes retail sales data to predict future sales trends both nationally and by region.
+This project is part of my internship assignment where I built a predictive analytics dashboard to forecast retail sales using historical data and machine learning.
 
-## Project Structure
+## 📂 Project Structure
 
 ```
 ├── Data/
@@ -28,7 +28,14 @@ This project analyzes superstore sales data to create forecasting models for bot
 - Regional sales breakdown
 - Preparation of Prophet-ready datasets
 
-## Data Processing Steps
+## 🛠️ Tech Stack
+
+- Python (Pandas, Prophet, Matplotlib, Seaborn)
+- Power BI
+- Git & GitHub
+
+
+## 📊 Data Processing Steps
 
 1. Data loading and initial exploration
 2. DateTime conversion for Order and Ship dates
