@@ -2,7 +2,9 @@
 
 ## 🎯 Project Overview
 
-This project is a comprehensive **AI-powered Sales Forecasting Dashboard** that analyzes historical sales data from a Superstore dataset and provides accurate sales predictions using advanced machine learning techniques. The dashboard offers interactive visualizations and insights for strategic business decision-making.
+This project delivers a comprehensive **Sales Forecasting Dashboard** using advanced machine learning (Prophet) for forecasting and **Power BI** for interactive business intelligence. The workflow covers data cleaning, exploration, forecasting, and professional dashboarding.
+
+---
 
 ## 🚀 Project Structure
 
@@ -10,271 +12,114 @@ This project is a comprehensive **AI-powered Sales Forecasting Dashboard** that 
 sales_forecasting_dashboard/
 ├── Data/
 │   ├── Raw/                    # Original Superstore dataset
-│   ├── Processed/              # Cleaned and processed data
-│   └── Forecast/               # Generated forecasts by region
-├── notebooks/                  # Jupyter notebooks for analysis
-│   ├── 01_exploration.ipynb   # Data exploration and analysis
-│   ├── 02_forecast.ipynb      # Forecasting model development
-│   └── 03_dashboard_data_preparation.ipynb # Data preparation for dashboard
-├── dashboard.py                # Main Streamlit dashboard application
-├── .streamlit/config.toml     # Dashboard configuration
-└── requirements.txt           # Project dependencies
+│   ├── Processed/              # Cleaned and processed data for BI
+│   └── Forecast/               # Model-generated forecasts (national & regional)
+├── notebooks/                  # Jupyter notebooks for EDA, modeling, prep
+│   ├── 01_exploration.ipynb
+│   ├── 02_forecast.ipynb
+│   └── 03_dashboard_data_preparation.ipynb
+├── Sale Forecast.pbix          # Power BI dashboard file (main deliverable)
+├── requirements.txt            # Python dependencies for data/modeling
+└── README.md                   # Project documentation (this file)
 ```
 
-## 📈 Data Processing Pipeline
+---
 
-### 1. **Data Exploration** (`01_exploration.ipynb`)
-- **Purpose**: Initial analysis of the Superstore dataset
-- **Activities**: 
-  - Data quality assessment
-  - Sales trend analysis
-  - Regional performance evaluation
-  - Seasonal pattern identification
-  - Statistical summary generation
+## 📈 Data & Modeling Pipeline
 
-### 2. **Forecasting Model Development** (`02_forecast.ipynb`)
-- **Purpose**: Building and training the sales forecasting model
-- **Techniques Used**:
-  - **Prophet Model**: Facebook's time series forecasting algorithm
-  - **Seasonal Decomposition**: Identifying trends, seasonality, and residuals
-  - **Regional Analysis**: Separate forecasting for each region (Central, East, South, West)
-  - **Confidence Intervals**: Providing uncertainty estimates for predictions
+1. **Data Exploration** (`notebooks/01_exploration.ipynb`)
+   - Cleans, explores, and visualizes the Superstore dataset.
+2. **Forecasting** (`notebooks/02_forecast.ipynb`)
+   - Trains Prophet models (national & regional), outputs forecast CSVs.
+3. **Dashboard Data Prep** (`notebooks/03_dashboard_data_preparation.ipynb`)
+   - Aggregates and formats data for Power BI.
 
-### 3. **Dashboard Data Preparation** (`03_dashboard_data_preparation.ipynb`)
-- **Purpose**: Preparing processed data for dashboard visualization
-- **Outputs**:
-  - `pbi_forecast_national.csv`: National-level forecasts
-  - `pbi_forecast_by_region.csv`: Regional forecasts
-  - `monthly_sales_national.csv`: Historical national sales
-  - `monthly_sales_by_region.csv`: Historical regional sales
+**Processed data** is saved in `Data/Processed/` and `Data/Forecast/`.
 
-## 🎨 Dashboard Sections Explained
+---
 
-### 🏠 **Overview Page**
-**What it represents**: Executive summary and key performance indicators
+## 📊 Power BI Dashboard: `Sale Forecast.pbix`
 
-**Components**:
-- **Key Metrics Row**: 
-  - Latest Forecast: Most recent sales prediction
-  - Average Forecast: Mean of all forecasted values
-  - Regions Analyzed: Number of geographic regions (4: Central, East, South, West)
-  - Forecast Periods: Total number of time periods analyzed
+### **How to Use**
+- Open `Sale Forecast.pbix` in Power BI Desktop (free from Microsoft).
+- If prompted, update data source paths to your local CSVs in `Data/Processed/`.
+- Click “Refresh” to load the latest data.
 
-- **National Sales Forecast Trend**: 
-  - Shows the complete forecast timeline with confidence intervals
-  - Blue line represents predicted sales
-  - Shaded area shows the range of likely values (confidence interval)
+### **Dashboard Pages & Features**
+1. **Overview**
+   - Executive KPIs (latest forecast, average, regions)
+   - National forecast trend (with confidence intervals)
+   - Regional performance comparison
 
-- **Regional Forecast Comparison**: 
-  - Bar chart comparing latest forecasts across all regions
-  - Helps identify which regions are performing best/worst
+2. **National Forecast**
+   - Interactive time series with date slicer
+   - Monthly/seasonal breakdowns
+   - Key statistics (average, max, min, volatility)
 
-**Business Value**: Quick overview for executives to understand current forecasting status and regional performance.
-<img width="1896" height="869" alt="Screenshot 2025-07-13 124204" src="https://github.com/user-attachments/assets/9eb2180c-5cd6-4a6b-9366-70bcb3ba5a92" />
-
-### 📈 **National Forecast Page**
-**What it represents**: Detailed analysis of national sales forecasting with interactive controls
-
-**Components**:
-- **Date Range Selector**: 
-  - Interactive date pickers to focus on specific time periods
-  - Allows zooming into particular months or years
-
-- **Main Forecast Chart**: 
-  - Interactive line chart with confidence intervals
-  - Shows predicted sales with upper/lower bounds
-  - Hover for detailed values
-
-- **Statistics Panel**: 
-  - Average, Maximum, and Minimum forecasts for selected period
-  - Quick numerical insights
-
-- **Monthly Breakdown**: 
-  - Bar chart showing average sales by month
-  - Identifies seasonal patterns (e.g., December peaks, February lows)
-
-**Business Value**: Detailed planning tool for national sales strategies and resource allocation.
-<img width="1911" height="869" alt="Screenshot 2025-07-13 124236" src="https://github.com/user-attachments/assets/1f980d40-dc34-411b-8a32-19f84d9f4c63" />
-<img width="1905" height="813" alt="Screenshot 2025-07-13 124300" src="https://github.com/user-attachments/assets/214a32c2-3a0b-415e-92e4-2653fbd2dfe6" />
+3. **Regional Analysis**
+   - Multi-region comparison (line/bar charts)
+   - Regional performance table and ranking
 
 
-### 🗺️ **Regional Analysis Page**
-**What it represents**: Comparative analysis of sales performance across different geographic regions
+**All visuals are interactive:**  
+- Use slicers to filter by date or region  
+- Hover for tooltips  
+- Drill down for details
 
-**Components**:
-- **Region Selector**: 
-  - Multi-select dropdown to choose which regions to compare
-  - Default shows all regions (Central, East, South, West)
+---
 
-- **Regional Comparison Chart**: 
-  - Line chart showing forecast trends for selected regions
-  - Different colors for each region
-  - Helps identify regional patterns and differences
+## 🛠️ Technical Stack
 
-- **Regional Performance Summary**: 
-  - Data table with statistics for each region:
-    - Average: Mean sales per region
-    - Maximum: Peak sales achieved
-    - Minimum: Lowest sales recorded
-    - Std Dev: Sales volatility/consistency
+- **Python**: Data cleaning, modeling (Prophet), CSV export
+- **Power BI**: Data visualization, business intelligence
+- **Jupyter Notebooks**: EDA, modeling, and data prep
+- **Data**: Superstore sales (monthly, by region)
 
-- **Top Performing Regions**: 
-  - Bar chart ranking regions by latest forecast
-  - Color-coded by performance level
+---
 
-**Business Value**: Strategic planning for regional resource allocation, identifying growth opportunities, and understanding geographic market differences.
-<img width="1897" height="871" alt="Screenshot 2025-07-13 124332" src="https://github.com/user-attachments/assets/9a16245e-be99-4421-9597-c544a7182e30" />
-<img width="1888" height="670" alt="Screenshot 2025-07-13 124353" src="https://github.com/user-attachments/assets/01d5ea28-7953-441c-a6d8-5fb0e167ac2e" />
+## 🚀 Quick Start
 
-
-### 📊 **Performance Metrics Page**
-**What it represents**: Historical vs forecast comparison and growth analysis
-
-**Components**:
-- **Performance Metrics Row**: 
-  - Historical Average: Mean of actual past sales
-  - Forecast Average: Mean of predicted sales
-  - Growth Rate: Percentage change from historical to forecast
-  - Volatility: Standard deviation showing sales consistency
-
-- **Historical vs Forecast Performance**: 
-  - Dual-line chart comparing actual vs predicted sales
-  - Orange line: Historical data
-  - Blue line: Forecast data
-  - Shows how well the model predicts actual trends
-
-- **Seasonal Analysis**: 
-  - Grouped bar chart comparing monthly averages
-  - Historical vs forecast for each month
-  - Identifies seasonal patterns and prediction accuracy
-
-**Business Value**: Model validation, understanding prediction accuracy, and identifying seasonal business patterns for strategic planning.
-<img width="1895" height="859" alt="Screenshot 2025-07-13 124417" src="https://github.com/user-attachments/assets/4f173e18-a0e6-4835-aa18-3b213003c68c" />
-<img width="1901" height="668" alt="Screenshot 2025-07-13 124438" src="https://github.com/user-attachments/assets/81acea39-e290-48df-9468-41c7b488685e" />
-
-## 🔧 Technical Implementation
-
-### **Forecasting Model**
-- **Algorithm**: Facebook Prophet
-- **Features**: Handles seasonality, trends, and holidays automatically
-- **Output**: Point forecasts with confidence intervals
-- **Regional Approach**: Separate models for each region to capture local patterns
-
-### **Dashboard Technology**
-- **Framework**: Streamlit (Python web application)
-- **Visualization**: Plotly (Interactive charts)
-- **Data Processing**: Pandas (Data manipulation)
-- **Styling**: Custom CSS for professional appearance
-
-### **Data Flow**
-1. **Raw Data** → Superstore sales dataset
-2. **Processing** → Cleaned and aggregated by month/region
-3. **Modeling** → Prophet forecasting for each region
-4. **Dashboard** → Interactive visualization and analysis
-
-## 🎯 Business Intelligence Insights
-
-### **Strategic Planning**
-- **Long-term projections**: 5-year sales forecasts
-- **Seasonal planning**: Identify peak and low seasons
-- **Resource allocation**: Regional performance insights
-
-### **Risk Assessment**
-- **Confidence intervals**: Understand forecast uncertainty
-- **Volatility analysis**: Identify stable vs volatile regions
-- **Model validation**: Compare predictions with actual performance
-
-### **Performance Monitoring**
-- **Growth tracking**: Historical vs forecast comparisons
-- **Regional benchmarking**: Compare performance across regions
-- **Trend analysis**: Identify upward/downward sales patterns
-
-## 🚀 How to Run
-
-### **Prerequisites**
-- Python 3.8 or higher
-- Required packages (see requirements.txt)
-
-### **Quick Start**
+### **Python Data Pipeline**
 ```bash
-# Install dependencies
 pip install -r requirements.txt
-
-# Run the dashboard
-streamlit run dashboard.py
+# Run notebooks in order for data prep and forecasting
 ```
 
-### **Access Dashboard**
-- URL: `http://localhost:8501`
-- Opens automatically in your default browser
+### **Power BI Dashboard**
+1. Open `Sale Forecast.pbix` in Power BI Desktop
+2. Update data source paths if needed
+3. Click “Refresh” to load latest data
+4. Explore the dashboard!
 
-## 📊 Key Metrics Explained
+---
 
-### **Forecast Metrics**
-- **yhat**: Predicted sales value
-- **yhat_lower/yhat_upper**: Confidence interval bounds
-- **Confidence Interval**: Range where actual sales are likely to fall
+## 📈 Key Metrics & Insights
 
-### **Performance Metrics**
-- **Growth Rate**: Percentage change from historical to forecast
-- **Volatility**: Standard deviation indicating sales consistency
-- **Seasonal Patterns**: Monthly variations in sales performance
+- **Forecast**: Prophet model predictions (with upper/lower bounds)
+- **Growth Rate**: % change from historical to forecast
+- **Volatility**: Standard deviation of sales
+- **Regional Performance**: Compare and rank regions
+- **Seasonality**: Monthly/seasonal sales patterns
 
-### **Regional Analysis**
-- **Central Region**: Geographic area with specific sales patterns
-- **East Region**: Different market characteristics and trends
-- **South Region**: Unique regional performance factors
-- **West Region**: Distinct sales patterns and opportunities
-
-## 🎨 Dashboard Features
-
-### **Interactive Elements**
-- **Date Range Selectors**: Focus on specific time periods
-- **Region Filters**: Compare selected geographic areas
-- **Hover Tooltips**: Detailed information on chart elements
-- **Responsive Design**: Works on different screen sizes
-
-### **Professional Styling**
-- **Modern Design**: Clean, professional appearance
-- **Color Coding**: Consistent color scheme for easy interpretation
-- **Gradient Headers**: Visual appeal with gradient text effects
-- **Smooth Animations**: Enhanced user experience
-
-## 📈 Data Sources
-
-### **Superstore Dataset**
-- **Product Categories**: Furniture, Office Supplies, Technology
-- **Geographic Coverage**: 4 regions across the United States
-- **Time Period**: Historical sales data with monthly aggregation
-- **Variables**: Sales, Profit, Quantity, Region, Category
-
-### **Forecast Outputs**
-- **National Level**: Overall sales predictions
-- **Regional Level**: Geographic-specific forecasts
-- **Time Horizon**: Extended forecasting period
-- **Confidence Bands**: Uncertainty quantification
+---
 
 ## 🔍 Troubleshooting
 
-### **Common Issues**
-1. **Data Loading Errors**: Ensure CSV files are in correct directories
-2. **Missing Dependencies**: Install requirements with `pip install -r requirements.txt`
-3. **Display Issues**: Clear browser cache or try different browsers
+- **Power BI Data Not Loading?**
+  - Check that CSV paths in Power BI match your local folder structure
+  - Click “Transform Data” > “Edit Source” to update paths
 
-### **Performance Tips**
-- Use data caching for large datasets
-- Optimize chart rendering with appropriate sampling
-- Consider database connections for real-time updates
+- **Python Errors?**
+  - Ensure all packages in requirements.txt are installed
+  - Run notebooks in order
 
-
-**Built using Streamlit, Plotly, and Facebook Prophet**
-
-*This project demonstrates advanced time series forecasting techniques applied to real-world business data, providing actionable insights for strategic decision-making.*
+---
 
 ## 👤 Author
 
 **Developed by:**  
-- Sankalp Tiwari
-- [LinkedIn](www.linkedin.com/in/sankalp-tiwari-350545203)
+- Sankalp Tiwari  
+- [LinkedIn](www.linkedin.com/in/sankalp-tiwari-350545203)  
 - [GitHub](https://github.com/Sankalp-Dev06)
+
 
