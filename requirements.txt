@@ -1,0 +1,19 @@
+# AI-Powered Sales Forecasting Dashboard (Superstore Dataset)
+# Core data processing and analysis
+pandas>=1.5.3
+numpy>=1.24.3
+scikit-learn>=1.2.2
+
+# Visualization
+matplotlib>=3.7.1
+seaborn>=0.12.2
+plotly>=5.13.1
+
+# Time series forecasting
+prophet>=1.1.4
+
+# Dashboard
+streamlit>=1.24.0
+pillow>=9.5.0
+streamlit-option-menu>=0.3.6
+streamlit-card>=0.0.4
