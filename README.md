@@ -18,7 +18,7 @@ sales_forecasting_dashboard/
 │   ├── 01_exploration.ipynb
 │   ├── 02_forecast.ipynb
 │   └── 03_dashboard_data_preparation.ipynb
-├── Sale Forecast.pbix          # Power BI dashboard file (main deliverable)
+├── Sale Forecast Dashboard.pbix          # Power BI dashboard file (main deliverable)
 ├── requirements.txt            # Python dependencies for data/modeling
 └── README.md                   # Project documentation (this file)
 ```
@@ -50,15 +50,21 @@ sales_forecasting_dashboard/
    - Executive KPIs (latest forecast, average, regions)
    - National forecast trend (with confidence intervals)
    - Regional performance comparison
+     <img width="1168" height="742" alt="Screenshot 2025-07-13 164710" src="https://github.com/user-attachments/assets/a6dc5cb7-7c32-4f83-a571-fdcbc6fe2ba5" />
+
 
 2. **National Forecast**
    - Interactive time series with date slicer
    - Monthly/seasonal breakdowns
    - Key statistics (average, max, min, volatility)
+     <img width="1162" height="732" alt="image" src="https://github.com/user-attachments/assets/2fb221bf-f375-48e3-9758-f925e3c750f0" />
+     <img width="1169" height="732" alt="image" src="https://github.com/user-attachments/assets/84a0ef81-469c-4bb2-a650-3be62ae13cff" />
+
 
 3. **Regional Analysis**
    - Multi-region comparison (line/bar charts)
    - Regional performance table and ranking
+     <img width="1173" height="656" alt="image" src="https://github.com/user-attachments/assets/ae1a6a75-463a-44b1-9bbf-c6df397195d2" />
 
 
 **All visuals are interactive:**  
