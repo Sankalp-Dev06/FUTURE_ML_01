@@ -70,6 +70,7 @@ sales_forecasting_dashboard/
   - Helps identify which regions are performing best/worst
 
 **Business Value**: Quick overview for executives to understand current forecasting status and regional performance.
+<img width="1896" height="869" alt="Screenshot 2025-07-13 124204" src="https://github.com/user-attachments/assets/9eb2180c-5cd6-4a6b-9366-70bcb3ba5a92" />
 
 ### 📈 **National Forecast Page**
 **What it represents**: Detailed analysis of national sales forecasting with interactive controls
@@ -93,6 +94,9 @@ sales_forecasting_dashboard/
   - Identifies seasonal patterns (e.g., December peaks, February lows)
 
 **Business Value**: Detailed planning tool for national sales strategies and resource allocation.
+<img width="1911" height="869" alt="Screenshot 2025-07-13 124236" src="https://github.com/user-attachments/assets/1f980d40-dc34-411b-8a32-19f84d9f4c63" />
+<img width="1905" height="813" alt="Screenshot 2025-07-13 124300" src="https://github.com/user-attachments/assets/214a32c2-3a0b-415e-92e4-2653fbd2dfe6" />
+
 
 ### 🗺️ **Regional Analysis Page**
 **What it represents**: Comparative analysis of sales performance across different geographic regions
@@ -119,6 +123,9 @@ sales_forecasting_dashboard/
   - Color-coded by performance level
 
 **Business Value**: Strategic planning for regional resource allocation, identifying growth opportunities, and understanding geographic market differences.
+<img width="1897" height="871" alt="Screenshot 2025-07-13 124332" src="https://github.com/user-attachments/assets/9a16245e-be99-4421-9597-c544a7182e30" />
+<img width="1888" height="670" alt="Screenshot 2025-07-13 124353" src="https://github.com/user-attachments/assets/01d5ea28-7953-441c-a6d8-5fb0e167ac2e" />
+
 
 ### 📊 **Performance Metrics Page**
 **What it represents**: Historical vs forecast comparison and growth analysis
@@ -142,6 +149,8 @@ sales_forecasting_dashboard/
   - Identifies seasonal patterns and prediction accuracy
 
 **Business Value**: Model validation, understanding prediction accuracy, and identifying seasonal business patterns for strategic planning.
+<img width="1895" height="859" alt="Screenshot 2025-07-13 124417" src="https://github.com/user-attachments/assets/4f173e18-a0e6-4835-aa18-3b213003c68c" />
+<img width="1901" height="668" alt="Screenshot 2025-07-13 124438" src="https://github.com/user-attachments/assets/81acea39-e290-48df-9468-41c7b488685e" />
 
 ## 🔧 Technical Implementation
 
