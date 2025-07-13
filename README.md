@@ -274,6 +274,7 @@ streamlit run dashboard.py
 ## 👤 Author
 
 **Developed by:**  
-Sankalp Tiwari   
-- [LinkedIn](www.linkedin.com/in/sankalp-tiwari-350545203) | [GitHub](https://github.com/Sankalp-Dev06)
+- Sankalp Tiwari
+- [LinkedIn](www.linkedin.com/in/sankalp-tiwari-350545203)
+- [GitHub](https://github.com/Sankalp-Dev06)
 
